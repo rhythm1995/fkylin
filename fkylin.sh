@@ -5,6 +5,9 @@
 apt-get update
 apt-get install openjdk-7-jre openjdk-7-jdk
 
+yum update
+yum install java-1.8.0-openjdk-devel.x86_64
+
 #install hadoop
 cd /usr/local
 echo "Which hadoop do you want need?(Please input 1,2,3, default 2)"
