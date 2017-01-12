@@ -24,3 +24,4 @@ tar -zxvf hbase-1.1.8-bin.tar.gz
 
 
 #install kylin
+wget http://mirror.bit.edu.cn/apache/kylin/apache-kylin-1.5.3/apache-kylin-1.5.3-bin.tar.gz
