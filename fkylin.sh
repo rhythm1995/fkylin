@@ -16,7 +16,7 @@ echo "2:hadoop-2.7.2 : 默认版本"
 echo "3:hadoop-3.0.0(alphal) : 最新试用版本"
 hadoop_url = "http://mirror.bit.edu.cn/apache/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz"
 hadoop-1.2.1_path = "http://mirror.bit.edu.cn/apache/hadoop/common/hadoop-1.2.1/hadoop-1.2.1.tar.gz"
-hadoop-2.7.2_path = "http://mirror.bit.edu.cn/apache/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz"
+hadoop-2.6.5_path = "http://mirror.bit.edu.cn/apache/hadoop/common/hadoop-2.6.5/hadoop-2.6.5.tar.gz"
 hadoop-3.0.0-alphal_path = "http://mirror.bit.edu.cn/apache/hadoop/common/hadoop-3.0.0-alpha1/hadoop-3.0.0.tar.gz"
 read hadoop
 if [ $hadoop = 1 ]
