@@ -43,10 +43,6 @@ if linux_release_version == 1:
     os.system("wget http://mirror.bit.edu.cn/apache/hadoop/common/hadoop-/2.6.5/hadoop-2.6.5.tar.gz")
     os.system("wget http://mirror.bit.edu.cn/apache/hbase/1.1.8/hbase-1.1.8-bin.tar.gz")
     os.system("wget http://mirror.bit.edu.cn/apache/hive/hive-2.0.1/apache-hive-2.0.1-bin.tar.gz")
-    os.system("wget http://mirror.bit.edu.cn/apache/kylin/apache-kylin-1.5.3/apache-kylin-1.5.3-bin.tar.gz")
-    os.system("mv /etc/profile /etc/profile.default")
-    os.system("cp profile /etc/")
-    os.system("source /etc/profile")
 
 if linux_release_version == 2:
     print "Starting install in Ubuntu"
@@ -87,7 +83,10 @@ for file in java_list_arr:
 
 if linux_release_version == 1:
     print "Starting edit environment variable in Centos"
-
+    os.system("wget http://mirror.bit.edu.cn/apache/kylin/apache-kylin-1.5.3/apache-kylin-1.5.3-bin.tar.gz")
+    os.system("mv /etc/profile /etc/profile.default")
+    os.system("cp profile /etc/")
+    os.system("source /etc/profile")
 
 if linux_release_version == 2:
     print "Starting edit environment variable in Ubuntu"
@@ -103,6 +102,11 @@ if linux_release_version == 3:
     os.system("mv .bashrc ~/")
     os.system("source ~/.bashrc")
 
+os.system("cd /usr/local/hadoop/sbin/")
+os.system("./start-all.sh")
+os.system("cd /usr/local/hbase/bin")
+os.system("./start-hbase.sh")
+
 print "---------------------------------------------"
 print " congratulation!You finish all environment install and prepare,use commend './usr/local/kylin/bin/kylin.sh start' woo start kylin"
 print "______ _          _ _       "
@@ -113,4 +117,5 @@ print "| |   |   <| |_| | | | | | |"
 print "\_|   |_|\_\\__, |_|_|_| |_|"
 print "             __/ |          "
 print "            |___/           "
+print "Thinks for using fkylin by bugzhang"
 print "---------------------------------------------"
