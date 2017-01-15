@@ -21,7 +21,6 @@ print "2.ubuntu 14.4+"
 print "3.debian 8+"
 print "we can not support other release version"
 
-
 etc_issue = open('/etc/issue')
 linux_release_etc = etc_issue.readline()
 linux_release_key = linux_release_etc[1]
@@ -73,20 +72,25 @@ os.system("mv apache-hive-2.0.1-bin.tar.gz hive")
 os.system("mv hbase-1.1.8-bin.tar.gz")
 os.system("mv apache-kylin-1.5.3-bin.tar.gz kylin")
 
-java_all_path = "/usr/lib/jvm"
-java_list = os.listdir(java_all_path)
+java_list = os.listdir("/usr/lib/jvm")
 java_list_arr = []
 for file in java_list:
-    java_list_arr
+    java_list_arr.append(file)
+for file in java_list_arr:
+    java_string = "java-1.8.0-openjdk-1.8.0"
+    file_name_slice = file[0:23]
+    if file_name_slice == java_list_arr:
+        java_version = file_name_slice
 
 if linux_release_version == 1:
     print "Starting edit environment variable in Centos"
-    environment_file = open('~/.bashrc')
-
-    os.system("source ~/.bashrc")
+    environment_file = open('/etc/')
 
 if linux_release_version == 2:
     print "Starting edit environment variable in Ubuntu"
+    environment_file = open('~/.bashrc')
+
+    os.system("source ~/.bashrc")
 
 print "---------------------------------------------"
 print " congratulation!You finish all install,use commend './usr/local/kylin/bin/kylin.sh start' woo start kylin"
