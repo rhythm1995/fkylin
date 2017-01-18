@@ -65,7 +65,7 @@ if linux_release_version == 3:
 os.system("tar -zxvf hadoop-2.6.5.tar.gz")
 os.system("tar -zxvf hbase-1.1.8-bin.tar.gz")
 os.system("tar -zxvf apache-hive-2.0.1-bin.tar.gz")
-os.system("apache-kylin-1.5.3-bin.tar.gz")
+os.system("apache-kylin-1.5.3-bin.tar.gzå")
 os.system("mv hadoop-2.6.5.tar.gz hadoop")
 os.system("mv apache-hive-2.0.1-bin.tar.gz hive")
 os.system("mv hbase-1.1.8-bin.tar.gz")
